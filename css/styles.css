@@ -2,4 +2,67 @@
     --PurpleDark: #472758;
     --PurpleLight: #4D2C5E;
     --Black: #1D1D1D;
+    --fuenteMain:  "Roboto", sans-serif;
+    --white: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header  .container-header .content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .container-header .content-header .logo-header .logo-header-a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.header .container-header .content-header .logo-header .logo-header-a h1{
+    font-size: 1.5rem;
+    font-family: var(--fuenteMain);
+    font-weight: 900;
+    color: var(--Black);
+}
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header .content-nav-header .nav .ul-nav {
+    display: flex;
+    gap:10px;
+    font-weight: 700;
+}
+.header .content-nav-header .ul-nav li a{
+    color: var(--Black);
+    font-family: var(--fuenteMain);
+}
+.header .content-nav-header .sign-in-header {
+    background-color: var(--PurpleLight);
+    width: 120px;
+    height: 35px;
+    border-radius: 20px;
+}
+.header .content-nav-header .sign-in-header .btn-signUp{
+    color: var(--white);
+    font-family: var(--fuenteMain);
+    padding: 30px;
 }

@@ -2,8 +2,10 @@
     --PurpleDark: #472758;
     --PurpleLight: #4D2C5E;
     --Black: #1D1D1D;
-    --fuenteMain:  "Roboto", sans-serif;
+    --fuenteMain: "Roboto", sans-serif;
     --white: #fff;
+    --YellowDark: #FF7426;
+    --greenLight:#DEF2EA;
 }
 
 li {
@@ -13,56 +15,133 @@ li {
 a {
     text-decoration: none
 }
-
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-.d-flex{
+
+.d-flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.header  .container-header .content-header{
+.header .container-header .content-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.header .container-header .content-header .logo-header .logo-header-a{
+
+.header .container-header .content-header .logo-header .logo-header-a {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.header .container-header .content-header .logo-header .logo-header-a h1{
+
+.header .container-header .content-header .logo-header .logo-header-a h1 {
     font-size: 1.5rem;
     font-family: var(--fuenteMain);
     font-weight: 900;
     color: var(--Black);
+
+    &:hover {
+        color: var(--PurpleDark);
+    }
 }
+
 .header .nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .header .content-nav-header .nav .ul-nav {
     display: flex;
-    gap:10px;
+    gap: 20px;
     font-weight: 700;
+    align-items: center;
+
 }
-.header .content-nav-header .ul-nav li a{
+
+.header .content-nav-header .ul-nav li a {
     color: var(--Black);
     font-family: var(--fuenteMain);
+
+    &:hover {
+        color: var(--PurpleDark);
+    }
 }
+
 .header .content-nav-header .sign-in-header {
     background-color: var(--PurpleLight);
     width: 120px;
-    height: 35px;
+    height: 40px;
     border-radius: 20px;
 }
-.header .content-nav-header .sign-in-header .btn-signUp{
+
+.header .content-nav-header .sign-in-header .btn-signUp {
     color: var(--white);
     font-family: var(--fuenteMain);
     padding: 30px;
+}
+
+@media(max-width: 480px) {
+    .header .container-header .content-header {
+        flex-direction: column;
+        margin: -9px 0 0px -42px;
+    }
+
+    .header .container-header .content-header .content-nav-header .nav .ul-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*Banner main*/
+.container-main {
+    background-image: url(/img/home/Group\ 327.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    width: 97%;
+    margin-top: 40px;
+}
+
+.container-main .content-main {
+    display: flex;
+}
+
+.container-main .content-main .content-main-column .info-main h2 {
+    font-size: 3rem;
+    font-family: var(--fuenteMain);
+    font-weight: 700;
+}
+
+.container-main .content-main .content-main-column .info-main p{
+    margin-top: -22px;
+}
+
+.container-main .content-main .content-main-column span {
+    color: var(--YellowDark);
+}
+
+.container-main .content-main .input-search .content-input-search input {
+    width: 100%;
+    height: 37px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--greenLight);
+    text-align: center;
+}
+.container-main .content-main .input-search .content-input-search img{
+    margin-left: -28%;
+
 }
